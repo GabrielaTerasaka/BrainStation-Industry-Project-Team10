@@ -1,0 +1,68 @@
+@use "../../styles/partials/functions" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.recent-trips{
+  background-color: $background-color2;
+  color: $font-secondary-color;
+
+  &__buttons-wrapper{
+    @include flex-wrap(row, flex-start);
+    padding: 0 toRem(20);
+    margin: toRem(10) 0;
+  }
+
+  &__button{
+    width: toRem(80);
+    height: toRem(24);
+    border-radius: toRem(24);
+    background-color: $secondary-color2;
+    color: $font-primary-color;
+    margin-right: toRem(15);
+    @include flex-wrap;
+    @include text-style(toRem(12),toRem(12),$font-semibold);
+
+    &--active{
+    background-color: $secondary-color1;
+
+    }
+  }
+}
+
+.cards-section{
+  @include flex-wrap;  
+  padding: toRem(10);
+  margin-bottom: toRem(100);
+}
+.card{
+  width: toRem(343);
+  height: toRem(128);
+  margin: toRem(10) auto;
+  border-radius: toRem(16);
+  @include flex-wrap(row, space-between);
+  color: $font-secondary-color;
+  @include text-style(toRem(12),toRem(12),$font-regular);
+  box-shadow: -2px 0px 3px rgba(0, 0, 0, 0.1), 2px 0px 3px rgba(0, 0, 0, 0.1), 0px 3px 7px rgba(0, 0, 0, 0.15);
+
+  &__img{
+    object-fit: cover; 
+    border-radius: toRem(16) 0 0 toRem(16);    
+    width: toRem(124);
+    height: toRem(128);
+  }
+
+  &__content-box{
+    padding: toRem(20);
+  }
+
+  &__location{
+    @include text-style(toRem(16),toRem(16),$font-semibold);
+    margin: toRem(10) 0;
+  }
+
+  &__text{
+    margin-bottom: toRem(5);
+    // width: toRem(156);
+  }
+}
+

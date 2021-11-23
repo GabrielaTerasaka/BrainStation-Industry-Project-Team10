@@ -1,0 +1,127 @@
+@use "../../styles/partials/functions" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.h2{
+  @include flex-wrap(row);
+  width: toRem(260);
+  @include text-style(toRem(16),toRem(16),$font-semibold);
+margin-bottom: toRem(5);
+}
+.p{
+  @include text-style(toRem(12),toRem(12),$font-regular);
+
+}
+.span{
+  margin-left: auto;
+  @include text-style(toRem(12),toRem(12),$font-semibold);
+
+}
+.selectedTrip{
+  margin-bottom: toRem(100);
+  &__map--image{
+    width:100%;
+    height: toRem(200);
+    object-fit: cover;
+    object-position: top;
+    // height:60vh;
+    
+  }
+  &__div{
+    display:flex;
+    margin:toRem(24);
+    color: $font-secondary-color;
+    
+    &--para{
+      &-start{
+        margin-top: toRem(10);
+        margin-bottom: toRem(13);
+        height: toRem(56);
+      }
+      &-charging{
+        margin-bottom: toRem(40);
+      }
+      &-route{
+        margin-bottom: toRem(45);
+      }
+      &-end{}
+    }
+      }
+  &__location{
+    &--image{
+    height:toRem(274);
+    margin-right:toRem(24);
+    // &--para{
+    //   height:toRem(20);
+    // }
+  }
+
+}
+  &__anchor{
+    background: $primary-color1;
+    margin:toRem(24); 
+    border-radius: toRem(24);
+    height:toRem(40);
+    display: flex;
+    justify-content: center;
+
+       &--link1{
+        color:#000000;
+        display: flex;
+        justify-content: center;
+         width:50%;
+        background: #FFFFFF;
+        margin:toRem(4); 
+        border-radius: toRem(24);
+        align-items: center;
+    }
+    &--link2{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+      width:50%;
+        background: $primary-color1;
+        margin:toRem(8); 
+        border-radius: toRem(24);
+        color:white;
+
+    }
+  }
+ 
+}
+
+.rewards{
+  // width: toRem(370);
+  margin-top: toRem(50);
+  padding: 0 toRem(10);
+  display: block;
+  &__points{
+    width: 100%;
+    text-align: right;
+    @include text-style(toRem(16),toRem(16),$font-semibold);
+   color: $font-secondary-color;
+
+    &--highlight{
+      @include text-style(toRem(20),toRem(20),$font-semibold);
+    }
+  }
+}
+.rewards-card{
+  @include flex-wrap(row, space-between);
+  color: $font-secondary-color;
+  margin-bottom: toRem(30);
+
+  &__box{
+    width: toRem(181);
+  }
+  &__title{
+    @include text-style(toRem(16),toRem(16),$font-semibold);
+  }
+  &__content{
+    @include text-style(toRem(12),toRem(12),$font-regular);
+
+  }
+  &__points{
+    @include text-style(toRem(16),toRem(16),$font-semibold);
+  }
+}

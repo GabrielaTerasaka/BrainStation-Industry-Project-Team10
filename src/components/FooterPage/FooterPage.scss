@@ -1,0 +1,36 @@
+@use "../../styles/partials/functions" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  background: $primary-color1;
+  
+  // padding: toRem(40) 0;
+  height: toRem(70);
+  @include flex-wrap(row);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+
+  &__box {
+   @include flex-wrap;
+   width:25%;
+  }
+  &__icon {
+   height: toRem(24);
+  }
+  &__text {
+    color: $supporting-color1;
+    opacity: 0.5;
+  margin-top:toRem(5);
+   @include text-style(toRem(12),toRem(12),$font-semibold);
+   &--active{
+    color: $font-primary-color;
+    opacity:1;
+   }
+  }
+}
+
+
+
+

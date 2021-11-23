@@ -1,0 +1,29 @@
+// Font Color
+$font-primary-color: #ffffff;
+$font-secondary-color:#000000;
+
+
+// Primary Colors
+$primary-color1: #11365f; // dark-blue
+$primary-color2: #91f2ff; // light-blue
+$primary-color3: #ffffff; // white
+
+// secondary colors
+$secondary-color1: #124A9D; // medium blue
+$secondary-color2: #0170CD; // medium blue 2
+
+// background colors
+$background-color1: linear-gradient($primary-color1, $secondary-color2);;
+$background-color2: #ffffff;
+
+// supporting colors
+$supporting-color1: #C6C6C6;
+// $supporting-color2: #c94515;
+
+// Font Weight
+$font-regular: 400;
+$font-semibold: 600;
+
+// Screen sizes
+$tablet-screensize: 767px;
+$desktop-screensize: 1280px;

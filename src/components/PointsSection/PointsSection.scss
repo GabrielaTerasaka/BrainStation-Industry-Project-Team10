@@ -1,0 +1,54 @@
+@use "../../styles/partials/functions" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.points{
+  padding: toRem(10);
+  &__wrapper{
+    @include flex-wrap(row, space-between, flex-end);
+    &--bottom{
+      justify-content: space-evenly;
+    }
+  }
+  &__img-progress{
+    display: block;
+    width: toRem(342);
+    margin: toRem(20) auto;
+  }
+  &__button{
+    background-color: $primary-color3;
+    @include flex-wrap;
+    padding: toRem(5) toRem(10);
+    border-radius: 48px;
+    width: toRem(153);
+    @include text-style(toRem(24), toRem(24), $font-regular);
+  }
+  &__number{
+    @include text-style(toRem(36), toRem(36), $font-semibold);
+  }
+  &__rewards{
+    margin-bottom: toRem(10);
+    color: $primary-color2;
+    text-decoration: underline;
+  }
+}
+
+
+.icon-text{
+  margin-top: toRem(20);
+  // width: 50%;
+  @include flex-wrap(row, flex-start);
+
+  &__icon{
+    width: toRem(48);
+    margin-right: toRem(8);
+  }
+  &__content{
+    width: toRem(103);
+    @include text-style(toRem(12), toRem(12), $font-semibold);
+    color: $font-primary-color;    
+  }
+  &__highlight{
+    color: $primary-color2;
+  }
+}

@@ -1,0 +1,35 @@
+@use "./typography" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./functions" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: left;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  color: $primary-color1;
+  // background: $background-color1;
+  // background-repeat: no-repeat;
+  @include text-style(toRem(12), toRem(12), $font-regular);
+  position: relative;
+}
+
+a {
+  color: $primary-color1;
+  text-decoration: none;
+}
+
+img {
+  border-radius: 4px;
+}
+
+li {
+  list-style: none;
+}

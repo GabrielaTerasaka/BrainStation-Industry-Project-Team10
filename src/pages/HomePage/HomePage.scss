@@ -1,0 +1,21 @@
+@use "../../styles/partials/functions" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.homepage{
+  background: $background-color1;
+  margin-bottom: toRem(200);
+  &__link{
+  // cursor: pointer;
+  @include flex-wrap;
+  }
+}
+
+.BtnSet{
+  margin-top: toRem(15);
+  background-color: $background-color2;
+  @include flex-wrap;
+  // display:flex;
+  // flex-direction:column;
+  border-radius: toRem(24) toRem(24) 0 0;
+}
